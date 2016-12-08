@@ -1,17 +1,8 @@
----
-title: 多说评论区显示UA与博主标示
-date: 2016-12-06 14:11:43
-categories: Hexo
-tags:
-  - Hexo
-subtitle: 在评论区显示用户所使用的UA标示
-header-img: "/img/blog_header1.jpg"
-cdn: 'header-off'
----
+#多说评论区显示UA与博主标示
 > 多说和Disqus是现在大多数博主喜欢使用的评论插件，这里总结了一下新版多说怎样显示浏览器信息与操作系统信息（UA），以及博主的标示。
 
 首先给大家看一下效果图，动态效果和详细情况可以查看本楼底部的评论去。
-{% img [class names] /img/dsUA/01.png  效果展示 %}
+<img src="/img/dsUA/01.png" />
 ### 1、添加头像旋转CSS与排版样式。
 
 操作步骤很简单，登录多说->后台管理->设置->基本设置->自定义CSS。
@@ -350,8 +341,7 @@ function sskos(e) {
 > 把19行 r == 6261430928132801282 后面的数字替换为自己的多说ID。
 
 自己ID查看方法：登录多说->个人资料->点击自己的名字，浏览器地址栏即为自己的多说ID。
-{% img [class names] /img/dsUA/02.png  多说ID %}
-
+<img src="/img/dsUA/02.png" />
 替换完成后，搜索 `u(r.name) + "</span>"),` 在它的后面添加代码下列代码：
 ```js
 t += "<span class=\"ua\">" + sskadmin(r.user_id) + "</span><span class=\"ua\">" + sskua(s.agent) + "</span><span class=\"ua\">" + sskos(s.agent) + "</span>",
