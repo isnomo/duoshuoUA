@@ -6,7 +6,7 @@
 ### 1、添加头像旋转CSS与排版样式。
 
 操作步骤很简单，登录多说->后台管理->设置->基本设置->自定义CSS。
-```cpp
+```css
 /*Head Start*/
 #ds-thread #ds-reset ul.ds-comments-tabs li.ds-tab a.ds-current {
     border: 0px;
@@ -349,7 +349,7 @@ t += "<span class=\"ua\">" + sskadmin(r.user_id) + "</span><span class=\"ua\">" 
 添加后此段代码前应为 `u(r.name) + "</span>"),` 此段代码后为 `t += "</div>", 1 == i.max_depth` 请注意插入代码的位置，此处容易出错。
 ### 3、添加UA与博主标示的CSS
 按照插入头像CSS的方法接着插入显示UA标示的CSS。
-```cpp
+```css
 /*UA Start*/
 span.ua {
     margin: 0 1px!important;
